@@ -1,0 +1,14 @@
+name: DisableEnchant
+main: LeoWasCoding\disableenchant\Main
+version: 1.0.0
+api: 5.3.0
+
+commands:
+  paintprotect:
+    description: Manage protected worlds for painting breaking
+    usage: /paintprotect <add|remove|list> [world]
+    permission: paintprotect.manage
+
+permissions:
+  paintprotect.manage:
+    default: op
