@@ -1,3 +1,7 @@
 # Worlds where paintings can't be broken
 protected-painting-worlds:
-  - world
+  - disabledworld
+
+# Worlds where item frames can't be broken or interacted with
+protected-itemframe-worlds:
+  - disabledworld
