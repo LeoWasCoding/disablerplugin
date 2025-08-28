@@ -56,11 +56,6 @@ class Main extends PluginBase implements Listener {
             $event->cancel();
             return;
         }
-    
-        if ($entity instanceof ItemFrame && in_array($world, $this->protectedWorldsFrames)) {
-            $event->cancel();
-            return;
-        }
     }
 
     public function onCommand(CommandSender $sender, Command $command, string $label, array $args): bool {
