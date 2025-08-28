@@ -7,7 +7,6 @@ use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerInteractEvent;
 use pocketmine\event\entity\EntityDamageByEntityEvent;
 use pocketmine\entity\object\Painting;
-use pocketmine\entity\object\ItemFrame;
 use pocketmine\block\BlockTypeIds;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
@@ -51,16 +50,13 @@ class Main extends PluginBase implements Listener {
 
     public function onEntityDamage(EntityDamageByEntityEvent $event): void {
         $entity = $event->getEntity();
-
-        if ($entity->getWorld() === null) return;
-
         $world = $entity->getWorld()->getFolderName();
-
+    
         if ($entity instanceof Painting && in_array($world, $this->protectedWorldsPaintings)) {
             $event->cancel();
             return;
         }
-
+    
         if ($entity instanceof ItemFrame && in_array($world, $this->protectedWorldsFrames)) {
             $event->cancel();
             return;
