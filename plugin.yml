@@ -1,6 +1,6 @@
 name: DisableEnchant
 main: LeoWasCoding\disableenchant\Main
-version: 1.0.0
+version: 1.1.0
 api: 5.3.0
 
 commands:
@@ -9,6 +9,13 @@ commands:
     usage: /paintprotect <add|remove|list> [world]
     permission: paintprotect.manage
 
+  itemframeprotect:
+    description: Manage protected worlds for item frame protection
+    usage: /itemframeprotect <add|remove|list> [world]
+    permission: itemframeprotect.manage
+
 permissions:
   paintprotect.manage:
+    default: op
+  itemframeprotect.manage:
     default: op
